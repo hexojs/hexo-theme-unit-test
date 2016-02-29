@@ -20,7 +20,8 @@ This test doesn't contain the default theme. You have to install the theme you w
 
 ### `<head>`
 
-- Use the proper [DOCTYPE](https://en.wikipedia.org/wiki/Document_Type_Declaration). If you don't know which doctype you should use, `<!DOCTYPE html>` is recommended.
+- Use the proper [DOCTYPE](https://en.wikipedia.org/wiki/Document_Type_Declaration).  
+  If you don't know which doctype you should use, `<!DOCTYPE html>` is recommended.
 - UTF8 charset
 
     ``` html
@@ -52,6 +53,11 @@ This test doesn't contain the default theme. You have to install the theme you w
 - Display the post date.
 - Support `photo` and `link` layout.
 - Posts without title should be accessible.
+
+### Performance
+
+- Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)  
+  It caches render result across post/pages, see [#1769](https://github.com/hexojs/hexo/issues/1769) for the impact
 
 ### Optional
 
