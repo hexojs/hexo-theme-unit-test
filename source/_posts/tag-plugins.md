@@ -50,6 +50,26 @@ array.map(callback[, thisArg])
 => [1, 2, 3]
 {% endcodeblock %}
 
+### With marked lines
+
+Line 1,7-8,10 should be marked with different color.
+
+{% codeblock lang:js mark:1,7-8,10 %}
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 1337;
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello World\n');
+}).listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+{% endcodeblock %}
+
+Note: Theme's style should support `.highlight.line.marked` (recommend to use the selection or current line color).
+
 ### Gist
 
 {% gist 996818 %}
