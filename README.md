@@ -44,7 +44,7 @@ This test doesn't contain the default theme. You have to install the theme you w
 ### Index
 
 - Only display excerpts. (Better with a "Read More" link)
-- [Pagination](http://zespia.tw/hexo/docs/pagination.html) (broken link)
+- [Pagination](https://hexo.io/docs/configuration.html#Pagination)
 
 ### Post
 
