@@ -10,4 +10,4 @@ This is a image test post.
 
 ![](/assets/wallpaper-878514.jpg)
 
-![Small Picture](http://placehold.it/350x150.jpg)
+![Small Picture](https://placehold.it/350x150.jpg)
