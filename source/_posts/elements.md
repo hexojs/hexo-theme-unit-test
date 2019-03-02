@@ -49,6 +49,12 @@ Maecenas ornare arcu at mi suscipit, non molestie tortor ultrices. Aenean conval
 - List Item 2
 - List Item 3
 
+### Checkbox List (ul)
+
+- [ ] List Item 1 unchecked
+- [x] List Item 2 checked
+- [X] List Item 3 checked
+
 ## Table
 
 | Table Header 1 | Table Header 2 | Table Header 3 |
