@@ -187,13 +187,13 @@ Some text to show that the reference links can follow later.
 [1]: https://hexo.io/docs/
 [link text itself]: https://hexo.io/api/
 
-
 ## Images
 
 ```markdown
 hover to see the title text:
 
 Inline-style:
+
 ![alt text](https://hexo.io/icon/favicon-196x196.png "Logo Title Text 1")
 
 Reference-style:
@@ -205,13 +205,13 @@ Reference-style:
 hover to see the title text:
 
 Inline-style:
+
 ![alt text](https://hexo.io/icon/favicon-196x196.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
 [logo]: https://hexo.io/icon/favicon-196x196.png "Logo Title Text 2"
-
 
 ## Code and Syntax Highlighting
 
