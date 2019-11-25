@@ -20,7 +20,7 @@ This test doesn't contain the default theme. You have to install the theme you w
 
 ### `<head>`
 
-- Use the proper [DOCTYPE](https://en.wikipedia.org/wiki/Document_Type_Declaration).  
+- Use the proper [DOCTYPE](https://en.wikipedia.org/wiki/Document_Type_Declaration).
   If you don't know which doctype you should use, `<!DOCTYPE html>` is recommended.
 - UTF8 charset
 
@@ -29,12 +29,6 @@ This test doesn't contain the default theme. You have to install the theme you w
     ```
 
 - Proper titles for different pages
-- RSS support
-
-    ``` html
-    <link rel="alternate" href="path/of/rss" type="application/atom+xml">
-    ```
-
 - Favicon support
 
     ``` html
@@ -56,7 +50,7 @@ This test doesn't contain the default theme. You have to install the theme you w
 
 ### Performance
 
-- Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)  
+- Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)
   It caches render result across post/pages, see [#1769](https://github.com/hexojs/hexo/issues/1769) for the impact
 
 ### Optional
@@ -65,6 +59,21 @@ This test doesn't contain the default theme. You have to install the theme you w
 - i18n
 - Post share
 - SEO
+- RSS [Autodiscovery](http://www.rssboard.org/rss-autodiscovery) support
+  * Example:
+  ``` html
+  <link rel="alternate" href="path/of/rss" type="application/atom+xml">
+  ```
+  * Some RSS plugins (e.g. [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) 2.1+) insert autodiscovery by default. There is a slight performance benefit if a theme inserts it, instead of the plugin. To take advantage of that, autodiscovery needs to be disabled in the plugin.
+    ``` yml
+    feed:
+      autodiscovery: false
+    ```
+  * RSS plugin could generate more than one type of RSS (e.g. Atom & RSS2). Here is an example EJS snippet for multi-format support by utilizing [`feed_tag`](https://hexo.io/docs/helpers#feed-tag) helper:
+    ``` js
+    <%- feed_tag() %>
+    ```
+  * If you decide to support autodiscovery, we recommend checking the updates of [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed/releases) (or any other RSS plugin that your theme prefers) from time to time. The configuration and functionality of an RSS plugin may change over time.
 
 ## Resources
 
