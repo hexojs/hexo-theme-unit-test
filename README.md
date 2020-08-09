@@ -69,9 +69,17 @@ This test doesn't contain the default theme. You have to install the theme you w
     feed:
       autodiscovery: false
     ```
-  * RSS plugin could generate more than one type of RSS (e.g. Atom & RSS2). Here is an example EJS snippet for multi-format support by utilizing [`feed_tag`](https://hexo.io/docs/helpers#feed-tag) helper:
+  * hexo-generator-feed plugin could generate more than one type of RSS (e.g. Atom & RSS2). Here is an example EJS snippet for multi-format support by utilizing [`feed_tag`](https://hexo.io/docs/helpers#feed-tag) helper:
     ``` js
     <%- feed_tag() %>
+    ```
+    * If you want to support other plugins, in addition to hexo-generator-feed:
+    ``` js
+    <% if (config.feed) { %>
+      <%- feed_tag() %>
+    <% } else if (theme.rss) { %>
+      <%- feed_tag(theme.rss) %>
+    <% } %>
     ```
   * If you decide to support autodiscovery, we recommend checking the updates of [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed/releases) (or any other RSS plugin that your theme prefers) from time to time. The configuration and functionality of an RSS plugin may change over time.
 
