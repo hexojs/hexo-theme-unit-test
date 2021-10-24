@@ -1,0 +1,61 @@
+<main>
+    <div class="wrap min">
+        <section class="post-title">
+            <h2><%= page.title ? page.title : "没有标题的文章" %></h2>
+            <div class="post-meta">
+                <time class="date"><%= date(page.date, "YYYY.MM.DD") %></time>
+            <% if (page.categories && page.categories.length){ %>
+                <span class="category"><%- list_categories(page.categories, {
+                    show_count: false,
+                    class: "",
+                    style: "none",
+                    separator: "，"
+                    }) %></span>
+            <% } %>
+            </div>
+        </section>
+        <article class="post-content">
+        <% if (moment().unix() - page.date.unix() >= 15552000) { %>
+            <blockquote>这篇文章上次修改于 <%= Math.ceil((moment().unix() - page.date.unix()) / 86400) %> 天前，可能其部分内容已经发生变化，如有疑问可询问作者。</blockquote>
+        <% } %>
+            <%- page.content %>
+        </article>
+        <section class="post-near">
+            <ul>
+                <% if( page.prev !== undefined) { %>
+                    <li>上一篇: <a href="<%= url_for(page.prev.path) %>"><%= page.prev.title %></a></li>
+                <% } else { %>
+                    <li>上一篇: 看完啦 (つд⊂)</li>
+                <% } %>
+                <% if( page.next !== undefined) { %>
+                    <li>下一篇: <a href="<%= url_for(page.next.path) %>"><%= page.next.title %></a></li>
+                <% } else { %>
+                    <li>下一篇: 看完啦 (つд⊂)</li>
+                <% } %>
+            </ul>
+        </section>
+        <% if (page.tags && page.tags.length){ %>
+            <section class="post-tags">
+            <%- list_tags(page.tags, {
+                show_count: false,
+                class: "",
+                style: "none",
+                separator: ""
+                }) %>
+            </section>
+        <% } %>
+    <% if (theme.author && theme.author_text) { %>
+        <section class="post-author">
+        <% if (theme.author_avatar) { %>
+            <figure class="author-avatar">
+                <img src="<%- theme.author_avatar %>" alt="<%= theme.author %>" />
+            </figure>
+        <% } %>
+            <div class="author-info">
+                <h4><%= theme.author %></h4>
+                <p><%- theme.author_text %></p>
+            </div>
+        </section>
+    <% } %>
+    </div>
+</main>

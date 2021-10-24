@@ -1,0 +1,30 @@
+<header>
+    <div class="head-title">
+        <h4><%= config.title %></h4>
+    </div>
+    <div class="head-action">
+        <div class="toggle-btn"></div>
+        <div class="light-btn"></div>
+        <div class="search-btn"></div>
+    </div>
+    <form class="head-search" method="post">
+        <input type="text" name="s" placeholder="搜索什么？">
+    </form>
+    <nav class="head-menu">
+        <a href="<%= url_for() %>">首页</a>
+        <div class="has-child">
+            <a>分类</a>
+            <div class="sub-menu">
+                <%- list_categories({
+                    style: false,
+                    separator: "",
+                    show_count: false,
+                    depth: 1
+                }) %>
+            </div>
+        </div>
+        <% for (var i in theme.menu){ %>
+            <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <% } %>
+    </nav>
+</header>

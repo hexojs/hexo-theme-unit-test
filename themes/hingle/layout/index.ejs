@@ -1,0 +1,16 @@
+<main>
+    <div class="wrap min">
+        <section class="home-title">
+            <h1><%= config.title %></h1>
+            <span><%= config.description %></span>
+            <%- partial("_partial/social") %>
+        </section>
+        <%- partial("_partial/archive-list") %>
+        <section class="page-navigator">
+            <%- paginator({
+                prev_text: "«",
+                next_text: "»"
+            }) %>
+        </section>
+    </div>
+</main>

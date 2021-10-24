@@ -1,0 +1,13 @@
+<main>
+    <div class="wrap min">
+        <section class="page-title">
+            <h2><%= page.title ? page.title : "没有标题的页面" %></h2>
+        </section>
+        <article class="page-content">
+        <% if (moment().unix() - page.date.unix() >= 15552000) { %>
+            <blockquote>这篇文章上次修改于 <%= Math.ceil((moment().unix() - page.date.unix()) / 86400) %> 天前，可能其部分内容已经发生变化，如有疑问可询问作者。</blockquote>
+        <% } %>
+            <%- page.content %>
+        </article>
+    </div>
+</main>

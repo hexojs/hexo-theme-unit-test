@@ -1,0 +1,39 @@
+<head>
+    <%
+        let title = "没有标题";
+
+        if(is_home()){
+            title = config.title;
+        }
+        else{
+            if(is_category()){
+                title = page.category;
+            }
+            else if(is_archive()){
+                title = page.year ? (
+                    page.year + " 年" + (page.month ? " " + page.month + " 月" : "")
+                ) : "归档";
+            }
+            else if(is_tag()){
+                title = page.tag;
+            }
+            else if(is_post() && page.title){
+                title = page.title;
+            }
+
+            title = title + " - " + config.title;
+        }
+    %> 
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <%- favicon_tag("static/img/icon.png") %>
+    <link rel="icon" href="/static/img/icon.png" sizes="192x192"/>
+    <%- css("static/kico.css", "static/hingle.css") %>
+    <%- css("https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css") %>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <meta property="og:site_name" content="<%= config.title %>">
+    <meta property="og:title" content="<%= page.title %>"/>
+    <% if (theme.background) { %>
+    <style>body:before{ content: ''; background-image: url(<%- theme.background %>) }</style>
+    <% } %>
+</head>

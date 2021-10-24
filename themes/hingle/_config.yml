@@ -1,0 +1,26 @@
+author: 'Paul' # 作者名称
+author_avatar: 'https://sdn.geekzu.org/avatar/d22eb460ecab37fcd7205e6a3c55c228?s=200&r=X&d=' # 作者头像
+author_text: '特立独行的一只前端菜狗。本站未注明转载的文章均为原创，并采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a> 授权协议，<span style="color: #E91E63">转载请注明来源</span>，谢谢！如本站内容对你有所帮助的话，不妨 <a href="https://paul.ren/donate">捐助支持</a> 一下？同时欢迎订阅关注 <a href="https://paul.ren/note" target="_blank">我的日记</a>，唠嗑（分享）每日的折腾经历。' # 作者信息
+social: # 社交链接
+  - title: '微博'
+    icon: 'weibo'
+    link: 'http://weibo.com/234891753'
+  - title: '企鹅群'
+    icon: 'qq'
+    link: 'https://jq.qq.com/?_wv=1027&amp;k=5uY9V3K'
+  - title: 'Github'
+    icon: 'github'
+    link: 'https://github.com/Dreamer-Paul'
+  - title: 'Steam'
+    icon: 'steam'
+    link: 'http://steamcommunity.com/id/dreamer-paul'
+  - title: '首页'
+    icon: 'home'
+    link: 'https://paul.ren'
+background: 'https://api.paugram.com/wallpaper?source=gh' # 主题背景
+menu: # 页眉菜单项目
+  '关于我': /about
+  '朋友们': /friends
+config:
+  copyright: true # 复制的时候弹出保留原站链接说明
+  night: true # 自动切换夜间模式

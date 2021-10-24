@@ -1,0 +1,30 @@
+<footer>
+    <div class="buttons">
+        <a class="to-top" href="#"></a>
+    </div>
+    <div class="wrap min">
+        <section class="widget">
+            <div class="row">
+                <div class="col-m-4">
+                    <h3 class="title-recent">最新文章：</h3>
+                    <%- list_posts() %>
+                </div>
+                <div class="col-m-4">
+                    <h3 class="title-date">时光机：</h3>
+                    <%- list_archives({ show_count: false }) %>
+                </div>
+                <div class="col-m-4">
+                    <h3 class="title-comments">最近评论：</h3>
+                    <%- tagcloud() %>
+                </div>
+            </div>
+        </section>
+        <section class="sub-footer">
+            <p>© <%= date(new Date, "YYYY") %> <a href="<%= url_for() %>"><%= config.title %></a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
+        </section>
+    </div>
+</footer>
+
+<%- js(["static/kico.js", "static/hingle.js"]) %>
+
+<script>var hingle = new Paul_Hingle(<%- JSON.stringify(theme.config) %>);</script>

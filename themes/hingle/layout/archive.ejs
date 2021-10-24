@@ -1,0 +1,29 @@
+<main>
+    <div class="wrap min">
+        <section class="home-title">
+            <%
+                let title;
+
+                if(is_category()){
+                    title = page.category;
+                }
+                else if(is_archive()){
+                    title = page.year ? (
+                        page.year + " 年" + (page.month ? " " + page.month + " 月" : "")
+                    ) : "归档";
+                }
+                else if(is_tag()){
+                    title = page.tag;
+                }
+            %>
+            <h1>“<%= title %>”</h1>
+        </section>
+        <%- partial("_partial/archive-list") %>
+        <section class="page-navigator">
+            <%- paginator({
+                prev_text: "«",
+                next_text: "»"
+            }) %>
+        </section>
+    </div>
+</main>
