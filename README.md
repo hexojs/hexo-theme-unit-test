@@ -59,7 +59,7 @@ This test doesn't contain the default theme. You have to install the theme you w
 - i18n
 - Post share
 - SEO
-- RSS [Autodiscovery](http://www.rssboard.org/rss-autodiscovery) support
+- RSS [Autodiscovery](https://www.rssboard.org/rss-autodiscovery) support
   * Example:
   ``` html
   <link rel="alternate" href="path/of/rss" type="application/atom+xml">
