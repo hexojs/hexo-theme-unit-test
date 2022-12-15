@@ -19,8 +19,8 @@ social: # 社交链接
     link: 'https://paul.ren'
 background: 'https://api.paugram.com/wallpaper?source=gh' # 主题背景
 menu: # 页眉菜单项目
-  '关于我': /about
-  '朋友们': /friends
+  '关于我': /page/about
+  '朋友们': /page/friends
 config:
   copyright: true # 复制的时候弹出保留原站链接说明
   night: true # 自动切换夜间模式
