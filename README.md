@@ -45,7 +45,7 @@ This test doesn't contain the default theme. You have to install the theme you w
 - Display post categories and tags.
 - Disqus comment support.
 - Display the post date.
-- Support `photo` and `link` layout.
+- Support `photos` in front-matter.
 - Posts without title should be accessible.
 
 ### Performance
