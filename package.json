@@ -6,7 +6,7 @@
     "version": ""
   },
   "dependencies": {
-    "hexo": "^7.0.0",
+    "hexo": "^8.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
